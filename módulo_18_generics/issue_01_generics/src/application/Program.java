@@ -10,19 +10,19 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 
-		PrintService<String> ps = new PrintService<>();
+		PrintService<Integer> ps = new PrintService<>();
 		
 		System.out.print("How many values? ");
 		int n = sc.nextInt();
 		sc.nextLine();
 
 		for (int i = 0; i < n; i++) {
-            String value = sc.nextLine();
+            Integer value = sc.nextInt();
 			ps.addValue(value);
 		}
 
 		ps.print();
-		String x = ps.first();
+		Integer x = ps.first();
         System.out.println("First: " + x);
 		
 		sc.close();
