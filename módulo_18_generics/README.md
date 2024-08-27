@@ -60,9 +60,9 @@ Esse programa é um exemplo da aplicação de generics na **Interface Comparable
 
 > Compilar o programa através do arquivo ``Makefile`` com o comando ``make``no terminal do linux.
 
-#### [issue_03_generics_coringa]()
+#### [issue_03_generics_curinga]()
 
-Nesse programa é introduzido o tipo **coringa** ``?``. O tipo coringa é utilizado em situações onde você não precisa **especificar um tipo concreto**, mas ainda deseja trabalhar com **coleções ou métodos** que aceitam múltiplos tipos. 
+Nesse programa é introduzido o tipo **curinga** ``?``. O tipo coringa é utilizado em situações onde você não precisa **especificar um tipo concreto**, mas ainda deseja trabalhar com **coleções ou métodos** que aceitam múltiplos tipos. 
 
 - Exemplo de uso no programa:
 
@@ -84,6 +84,25 @@ Nesse programa é introduzido o tipo **coringa** ``?``. O tipo coringa é utiliz
         }
 
 > Compilar o programa através do arquivo ``Makefile`` com o comando ``make``no terminal do linux.
+
+<br>
+
+#### [issue_04_generics_coringa_delimitado_I]()
+
+Os curingas podem ser **delimitados por extends ou super**. Curinga com extends: permite que você trabalhe com uma lista de um tipo específico ou de seus subtipos.
+
+- O método ``totalArea`` do programa é um exemplo da aplicação: 
+
+        Public static double totalArea(List<? extends Shape> list) {
+        double sum = 0.0;
+        for (Shape s : list) {
+            sum += s.area();
+        }
+
+- Note que por o método utilizar ``List<? extends Shape> list`` ele aceita trabalhar com listas do tipo ``Shape`` como também de suas subclasses: ``Rectangle`` e ``Circle``.
+
+> Compilar o programa através do arquivo ``Makefile`` com o comando ``make``no terminal do linux.
+
 
     
 

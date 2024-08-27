@@ -26,7 +26,6 @@ public class App {
     }
 
     // ? extends Shape -> significa que a lista é do tipo shape ou qualquer sub tipo
-    
     // da classe shape
     public static double totalArea(List<? extends Shape> list) {
         double sum = 0.0;
