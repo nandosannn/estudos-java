@@ -15,7 +15,7 @@ public class Program {
 
 		List<Product> list = new ArrayList<>();
 
-		String path = "D:\\Desenvolvimento Web\\Java\\Modulo 18\\in.txt";
+		String path = "//home//fernando/Área de trabalho//estudos-java//módulo_18_generics//in.txt";
 
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 
