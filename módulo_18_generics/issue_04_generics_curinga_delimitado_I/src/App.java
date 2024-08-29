@@ -19,8 +19,8 @@ public class App {
         List<Circle> myCircles = new ArrayList<>();
         myCircles.add(new Circle(2.0));
         myCircles.add(new Circle(3.0));
-        // O método totalArea só funciona para o tipo shape, mas não funciona para as
-        // subclasses
+
+        // Por causa do tipo curinga delimitador List<? extends Shape> é possível que a função totalArea funcione para sub classes de shape
         System.out.println("Total area: " + totalArea(myCircles));
     }
 
@@ -33,13 +33,4 @@ public class App {
         }
         return sum;
     }
-
-    List<Integer> intList = new ArrayList<Integer>();
-    intList.add(10);
-    intList.add(5);
-    List<? extends Number> list = intList;
-    Number x = list.get(0);
-    // list.add(20); // erro de compilacao 
-    //Com extends Number é possível acessar os valores da lista mas não é possível adicionar novos valores 
-
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/issue_01_generics_introdução/issue_01_generics_introdução.iml" filepath="$PROJECT_DIR$/issue_01_generics_introdução/issue_01_generics_introdução.iml" />
+      <module fileurl="file://$PROJECT_DIR$/issue_02_generics_comparable/issue_02_generics_comparable.iml" filepath="$PROJECT_DIR$/issue_02_generics_comparable/issue_02_generics_comparable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/issue_03_generics_curinga/issue_03_generics_curinga.iml" filepath="$PROJECT_DIR$/issue_03_generics_curinga/issue_03_generics_curinga.iml" />
+      <module fileurl="file://$PROJECT_DIR$/issue_04_generics_curinga_delimitado_I/issue_04_generics_curinga_delimitado_I.iml" filepath="$PROJECT_DIR$/issue_04_generics_curinga_delimitado_I/issue_04_generics_curinga_delimitado_I.iml" />
+      <module fileurl="file://$PROJECT_DIR$/issue_05_generics_curinga_delimitado_II/issue_05_generics_curinga_delimitado_II.iml" filepath="$PROJECT_DIR$/issue_05_generics_curinga_delimitado_II/issue_05_generics_curinga_delimitado_II.iml" />
+      <module fileurl="file://$PROJECT_DIR$/issue_06_hashCode/issue_06_hashCode.iml" filepath="$PROJECT_DIR$/issue_06_hashCode/issue_06_hashCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/issue_07_map/issue_07_map.iml" filepath="$PROJECT_DIR$/issue_07_map/issue_07_map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/módulo_18_generics.iml" filepath="$PROJECT_DIR$/.idea/módulo_18_generics.iml" />
+    </modules>
+  </component>
+</project>
