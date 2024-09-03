@@ -57,11 +57,13 @@ public class Product implements Comparable<Product>{
         return true;
     }
 
+    // Implementação do toString
     @Override
     public String toString() {
         return "Product [name=" + name + ", price=" + price + "]";
     }
 
+    // Implementação do compareTo
     @Override
     public int compareTo(Product other){
         return -getPrice().compareTo(other.getPrice());
