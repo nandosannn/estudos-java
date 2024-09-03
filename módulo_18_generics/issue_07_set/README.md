@@ -90,7 +90,7 @@ O tipo de dado Set em Java oferece uma variedade de métodos úteis para manipul
         intersectionSet.add("banana");
         set.retainAll(intersectionSet); // Mantém apenas os elementos que estão em intersectionSet
 
-- removeAll(other): Realiza a diferença, removendo do conjunto atual todos os elementos que estão presentes no conjunto fornecido.
+- `removeAll(other)`: Realiza a diferença, removendo do conjunto atual todos os elementos que estão presentes no conjunto fornecido.
 
         
         Set<String> differenceSet = new HashSet<>();
