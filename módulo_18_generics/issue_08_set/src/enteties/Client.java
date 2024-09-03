@@ -1,7 +1,5 @@
 package enteties;
 
-import java.util.Objects;
-
 public class Client {
     private String name;
     private String email;
@@ -30,32 +28,39 @@ public class Client {
         this.email = email;
     }
 
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((email == null) ? 0 : email.hashCode());
-
         return result;
     }
 
+
+
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true; // Verifica se é o mesmo objeto
-        if (obj == null || getClass() != obj.getClass()) return false;
-        // Verifica se é nulo ou de classe diferente
-
-        Client other = (Client) obj; // Faz o cast para Client
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Client other = (Client) obj;
         if (name == null) {
-            if (other.name != null) return false; // Verifica se o nome é nulo
-        } else if (!name.equals(other.name)) return false; // Compara os nomes
-
+            if (other.name != null)
+                return false;
+        } else if (!name.equals(other.name))
+            return false;
         if (email == null) {
-            if (other.email != null) return false; // Verifica se o email é nulo
-        } else if (!email.equals(other.email)) return false; // Compara os emails
-
-        return true; // Retorna true se todos os atributos são iguais
+            if (other.email != null)
+                return false;
+        } else if (!email.equals(other.email))
+            return false;
+        return true;
     }
+
+    
 }
