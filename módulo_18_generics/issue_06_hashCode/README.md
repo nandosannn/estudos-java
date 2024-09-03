@@ -9,7 +9,7 @@ As operações hashCode e equals são métodos fundamentais da classe Object em 
 ## Equals
 O método equals é utilizado para verificar se um objeto é igual a outro. A implementação padrão em Object compara referências de memória, mas é comum sobrescrevê-lo para comparar os atributos relevantes da classe.
 
-📝 Exemplo de Uso do Equals:
+📝 **Exemplo de Uso do Equals:**
 
     String a = "Maria";
     String b = "Alex";
@@ -75,22 +75,22 @@ Aqui está um exemplo de como você pode utilizar os métodos hashCode e equals 
 
 ## Observações Importantes
 
-- Caso c1 == c2, o programa retornará false, pois == compara referências de memória, que são diferentes.
+- Caso `c1 == c2`, o programa retornará false, pois `==` compara referências de memória, que são diferentes.
 - Para strings literais, como:
 
 
     String s1 = "Teste";
     String s2 = "Teste";
 
-O programa retorna true, pois o Java utiliza internamento de strings, fazendo com que ambas referenciem o mesmo objeto na memória.
-- Se você instanciar novas strings:
+O programa retorna `true`, pois o Java utiliza internamento de strings, fazendo com que ambas referenciem o mesmo objeto na memória.
+- Se você instanciar novas `strings`:
 
     
     String s1 = new String("Teste");
     String s2 = new String("Teste");
 
-O programa retornará false, pois s1 e s2 são referências a objetos diferentes na memória.
+O programa retornará `false`, pois `s1 e s2` são referências a objetos diferentes na memória.
 
 ## Conclusão
 
-A implementação correta dos métodos hashCode e equals é essencial para garantir a funcionalidade adequada de coleções em Java. Ao sobrescrever esses métodos, você assegura que os objetos sejam comparados de forma lógica, com base em seus atributos, e não apenas em suas referências de memória.
+A implementação correta dos métodos hashCode e equals é essencial para garantir a **funcionalidade adequada** de coleções em Java. Ao sobrescrever esses métodos, você assegura que os objetos sejam **comparados de forma lógica**, com base em seus atributos, e não apenas em suas referências de memória.
