@@ -79,15 +79,17 @@ Aqui está um exemplo de como você pode utilizar os métodos hashCode e equals 
 - Para strings literais, como:
 
 
-    String s1 = "Teste";
-    String s2 = "Teste";
+
+        String s1 = "Teste";
+        String s2 = "Teste";
 
 O programa retorna `true`, pois o Java utiliza internamento de strings, fazendo com que ambas referenciem o mesmo objeto na memória.
 - Se você instanciar novas `strings`:
 
+
     
-    String s1 = new String("Teste");
-    String s2 = new String("Teste");
+        String s1 = new String("Teste");
+        String s2 = new String("Teste");
 
 O programa retornará `false`, pois `s1 e s2` são referências a objetos diferentes na memória.
 
