@@ -3,6 +3,15 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Ignorar todas as pastas .idea em qualquer subdiretório
+**/.idea/
+
+# Ignorar outros arquivos e pastas
+target/
+*.class
+*.log
+.DS_Store
+
 ### IntelliJ IDEA ###
 .idea
 .idea/modules.xml
