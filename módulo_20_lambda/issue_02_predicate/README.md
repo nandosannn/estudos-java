@@ -19,10 +19,10 @@ Uma expressão lambda é composta por três partes principais:
 
 ## O que é uma Interface Funcional?
 
-Uma interface funcional é uma interface que contém exatamente um método abstrato. Isso permite que a interface seja implementada de forma concisa usando uma expressão lambda. A anotação @FunctionalInterface pode ser usada para indicar que uma interface é funcional, embora não seja obrigatória. Se uma interface é marcada com essa anotação, o compilador irá gerar um erro se houver mais de um método abstrato.
+Uma interface funcional é **uma interface que contém exatamente um método abstrato**. Isso permite que a interface seja implementada de forma concisa **usando uma expressão lambda**. A anotação `@FunctionalInterface` pode ser usada para indicar que uma interface é funcional, embora não seja obrigatória. Se uma interface é marcada com essa anotação, o compilador irá gerar um erro se houver **mais de um método abstrato**.
 
 
-**Exemplo de Interface Funcional:**
+## Interface Funcional Predicate
 
 - `Predicate<T>`: Representa uma função que recebe um argumento e retorna um valor booleano:
 
@@ -59,11 +59,15 @@ Uma interface funcional é uma interface que contém exatamente um método abstr
 
 - **Expressão lambda declarada:**
 
+Uma forma de utilizar um Predicate é declará-lo como uma variável antes de usá-lo. Isso pode ser útil quando você deseja reutilizar o mesmo critério em diferentes partes do código.
+
         //Predicate<Product> pred = p -> p.getPrice() >= 100.0;
         list.removeIf(pred);
 
 
 - **Expressão lambda inline:**
+
+Outra forma de aplicar um Predicate é utilizando uma expressão lambda inline diretamente no método removeIf(). Essa abordagem é mais concisa e pode ser preferida quando o critério é simples e não precisa ser reutilizado.
 
         //Expressão lambda Inline
         list.removeIf(p -> p.getPrice() >= 100.0);
