@@ -1,8 +1,8 @@
-package issue_02_calculo_predicate.src.util;
+package issue_02_predicate.src.util;
 
 import java.util.function.Predicate;
 
-import entities.Product;
+import issue_02_predicate.src.entities.*;
 
 public class MyPredicate implements Predicate<Product>{
 
