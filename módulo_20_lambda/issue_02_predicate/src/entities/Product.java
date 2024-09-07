@@ -1,4 +1,4 @@
-package issue_02_calculo_predicate.src.entities;
+package issue_02_predicate.src.entities;
 
 public class Product {
     private String name;
