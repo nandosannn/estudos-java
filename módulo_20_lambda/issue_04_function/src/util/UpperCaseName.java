@@ -1,8 +1,8 @@
-package issue_03_function.src.util;
+package issue_04_function.src.util;
 
 import java.util.function.Function;
 
-import issue_03_function.src.entities.Product;
+import issue_04_function.src.entities.Product;
 
 public class UpperCaseName implements Function<Product, String> {
 

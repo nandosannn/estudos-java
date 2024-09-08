@@ -1,12 +1,12 @@
-package issue_03_function.src.application;
+package issue_04_function.src.application;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import issue_03_function.src.util.UpperCaseName;
-import issue_03_function.src.entities.Product;
+import issue_04_function.src.entities.Product;
+import issue_04_function.src.util.UpperCaseName;
 
 public class Program {
     public static void main(String[] args) {

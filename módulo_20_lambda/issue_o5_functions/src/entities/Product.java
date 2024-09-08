@@ -1,12 +1,9 @@
-package issue_03_function.src.entities;
+package issue_o5_functions.src.entities;
 
 public class Product {
     private String name;
 	private Double price;
 	
-	public Product() {
-	}
-
 	public Product(String name, Double price) {
 		this.name = name;
 		this.price = price;
@@ -23,14 +20,13 @@ public class Product {
 	public Double getPrice() {
 		return price;
 	}
-
+ 
 	public void setPrice(Double price) {
 		this.price = price;
 	}
 
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", price=" + price + "]";
+		return name + ", " + String.format("%.2f", price);
 	}
-
 }
