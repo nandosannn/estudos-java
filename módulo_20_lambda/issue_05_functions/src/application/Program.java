@@ -1,11 +1,11 @@
-package issue_o5_functions.src.application;
+package issue_05_functions.src.application;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import issue_o5_functions.src.entities.Product;
-import issue_o5_functions.src.util.ProductService;
+import issue_05_functions.src.entities.Product;
+import issue_05_functions.src.util.ProductService;
 
 public class Program {
     public static void main(String[] args) {

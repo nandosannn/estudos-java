@@ -1,4 +1,4 @@
-package issue_o5_functions.src.entities;
+package issue_05_functions.src.entities;
 
 public class Product {
     private String name;

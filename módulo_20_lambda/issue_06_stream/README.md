@@ -231,3 +231,4 @@ Neste bloco, usamos o método estático `iterate()` da classe Stream para criar 
 Aqui, criamos uma stream `st4` de números da sequência de Fibonacci usando o método `iterate()`. O primeiro argumento é um array inicial contendo os primeiros dois números da sequência: `[0, 1]`. O segundo argumento é uma função que gera o próximo par na sequência: `p -> new long[] { p, p + p }`. Isso gera pares consecutivos de números de Fibonacci.
 
 Em seguida, usamos o método `map(p -> p)` para extrair apenas o primeiro elemento de cada par (ou seja, os números de Fibonacci propriamente ditos). Então, limitamos a stream aos primeiros 10 elementos usando `limit(10)` e convertemos para um array usando `toArray()`. A saída será `[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]`.
+
