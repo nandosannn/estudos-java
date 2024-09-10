@@ -40,7 +40,7 @@ Responsável por carregar as propriedades da conexão com o Banco de Dados.
     }
 
 - **Método Estático:** Este método é responsável por fornecer uma conexão ao banco de dados. Ele é declarado como static, permitindo que seja chamado sem criar uma instância da classe.
-- Verificação de Conexão: O método verifica se a variável conn é null `conn == null`. Se for, isso significa que não há uma conexão ativa.
+- **Verificação de Conexão:** O método verifica se a variável conn é null `conn == null`. Se for, isso significa que não há uma conexão ativa.
 - **Carregamento das Propriedades:** O método `loadProperties()` é chamado para carregar as propriedades de conexão a partir de um arquivo *(geralmente contendo a URL do banco de dados, usuário e senha)*.
 - **Estabelecimento da Conexão:** Utiliza DriverManager.getConnection(url, props) para criar a conexão com o banco de dados.
 - **Tratamento de Exceções:** Se ocorrer uma `SQLException`, uma nova Exception é lançada com a mensagem de erro.
