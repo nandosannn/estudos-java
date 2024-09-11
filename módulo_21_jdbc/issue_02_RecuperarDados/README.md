@@ -85,4 +85,23 @@ Java.
 **Metadados**:
 - **`getMetaData():`** Retorna um objeto ResultSetMetaData que fornece informações sobre as colunas do ResultSet, como nomes e tipos de dados.
 
+## Processamento dos Dados no código
 
+#### Execução da Consulta SQL
+
+    rs = st.executeQuery("select * from department");
+
+- **`st:`** Esta variável representa um objeto Statement, que é usado para enviar instruções SQL ao banco de dados.
+- **`executeQuery`**: Este método é utilizado para executar uma instrução SQL que retorna um conjunto de resultados (neste caso, uma consulta SELECT).
+- **`"select * from department"`**: Esta é a consulta SQL que está sendo executada. Ela seleciona todas as colunas (*) da tabela department.
+
+#### Acesso aos Resultados
+
+    while (rs.next()) {
+        System.out.println(rs.getInt("Id") + ", " + rs.getString("Name"));
+    }
+
+- **`rs`**: Esta variável representa um objeto ResultSet, que contém os dados retornados pela consulta SQL.
+- **`rs.next()`**: Este método move o cursor do `ResultSet` para a próxima linha. Ele retorna `true` se houver uma linha a ser processada e `false` se não houver mais linhas. O loop while continuará enquanto houver linhas disponíveis.
+- **`rs.getInt("Id")`**: Este método obtém o valor da coluna `"Id"` da linha atual do `ResultSet` como um inteiro.
+- **`rs.getString("Name")`**: Este método obtém o valor da coluna `"Name"` da linha atual do `ResultSet` como uma `string`.
