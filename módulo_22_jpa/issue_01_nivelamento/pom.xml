@@ -20,6 +20,7 @@
   </properties>
 
   <dependencies>
+   
     <!-- JUnit 5 mais recente -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -27,6 +28,7 @@
       <version>5.7.0</version>
       <scope>test</scope>
     </dependency>
+    
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>

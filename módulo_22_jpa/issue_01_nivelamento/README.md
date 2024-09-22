@@ -62,7 +62,62 @@ O **EntityManagerFactory** é uma interface que cria instâncias de `EntityManag
 
 #### Relação com JPA e Hibernate
 
-- **JPA:** É uma especificação para a persistência de dados em Java. O Maven facilita a inclusão das bibliotecas necessárias para usar JPA em um projeto Java através do gerenciamento automático das dependências no pom.xml.
+- **JPA:** É uma especificação para a persistência de dados em Java. O Maven facilita a inclusão das bibliotecas necessárias para usar JPA em um projeto Java através do **gerenciamento automático das dependências** no `pom.xml`.
 - **Hibernate:** É uma implementação popular da JPA que fornece funcionalidades adicionais para o mapeamento objeto-relacional. Com o Maven, você pode incluir Hibernate como uma dependência e configurar rapidamente sua aplicação para utilizar suas funcionalidades de persistência.
 
+## Código Main
 
+#### Criação do `EntityManagerFactory`
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("exemplo-jpa");
+
+- **`Persistence.createEntityManagerFactory("exemplo-jpa")`**: Este método estático da classe Persistence cria uma instância de EntityManagerFactory para a unidade de persistência especificada, que neste caso é "exemplo-jpa".
+- **`EntityManagerFactory`**: É uma fábrica que gerencia instâncias de EntityManager. Cada EntityManagerFactory é associado a uma unidade de persistência (definida em um arquivo persistence.xml) que contém as configurações necessárias para se conectar ao banco de dados, como URL, usuário, senha e outras propriedades.
+
+#### Criação do `EntityManager`
+
+        EntityManager em = emf.createEntityManager();
+
+- **`emf.createEntityManager()`**: Este método cria uma nova instância de EntityManager a partir da fábrica criada anteriormente.
+- **`EntityManager`**: É a interface principal utilizada para interagir com o contexto de persistência. Ele permite realizar operações como inserir, atualizar, remover e consultar entidades no banco de dados.
+
+#### Início da Transação
+
+        em.getTransaction().begin();
+
+- **`getTransaction()`**: Este método retorna um objeto EntityTransaction, que é usado para gerenciar transações em um contexto de persistência.
+- **`begin()`**: Chama o método begin() no objeto EntityTransaction, que inicia uma nova transação. A partir deste ponto, todas as operações de persistência realizadas (como inserções, atualizações ou remoções) serão parte dessa transação.
+
+#### Persistência de Objetos
+
+        em.persist(p1);
+        em.persist(p2);
+        em.persist(p3);
+
+- **`persist()`**: Este método é utilizado para marcar os objetos `p1, p2 e p3` (que são instâncias da classe Pessoa) para serem inseridos no banco de dados. Quando você chama `persist()`, o estado do objeto é gerenciado pelo `EntityManager`, e ele será salvo na base de dados quando a transação for confirmada (committed).
+- Os objetos são adicionados ao contexto de persistência, mas ainda não são efetivamente salvos no banco até que a transação seja confirmada.
+
+#### Confirmação da Transação
+
+        em.getTransaction().commit();
+
+
+- **`commit()`**: Este método é chamado no objeto `EntityTransaction` para confirmar a transação. Quando você chama `commit()`, todas as operações de persistência realizadas durante a transação (neste caso, as chamadas a `persist()`) são efetivamente aplicadas ao banco de dados.
+- Se não houver erros durante o processo, os dados dos objetos p1, p2 e p3 serão salvos no banco de dados.
+
+#### Explicação do Método find()
+
+        Pessoa p = em.find(Pessoa.class, 2);
+
+- O método **`find()`** é utilizado para recuperar uma entidade a partir do banco de dados usando sua chave primária. Neste caso, ele está buscando uma instância da classe `Pessoa` com o ID igual a 2.
+- **`Pessoa.class:`** Este é o tipo da entidade que se deseja recuperar. Passar a classe permite que o método saiba qual tipo de objeto deve ser retornado.
+- **`2`**: este é o valor da chave primária que está sendo procurada na tabela correspondente à entidade Pessoa. Se uma entidade com esse ID existir no banco de dados, ela será retornada.
+- O método retorna um objeto do tipo `Pessoa`. Se uma entidade com a chave primária especificada não for encontrada, ele retornará `null`. Isso significa que é importante verificar se o resultado é null antes de tentar usar o objeto retornado para evitar exceções de ponteiro nulo.
+- A entidade retornada pelo método **`find()`** está em um estado gerenciado pelo contexto de persistência, o que significa que qualquer alteração feita nesse objeto será rastreada e persistida no banco de dados quando a transação for confirmada **`(commit)`**.
+
+#### Remoção da Entidade
+
+        em.remove(p);
+
+- **`em.remove(p)`**: Este método marca o objeto p para remoção do banco de dados. A operação não é executada imediatamente; em vez disso, o objeto será removido quando a transação for confirmada.
+- É importante ressaltar que o método **`remove()`** só pode ser chamado em um objeto que está no estado gerenciado (ou seja, que foi recuperado anteriormente pelo **`find()`** ou persistido).
