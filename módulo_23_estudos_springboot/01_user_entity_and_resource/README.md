@@ -52,8 +52,8 @@ Permite que o Spring escaneie o pacote onde a classe está localizada (e seus su
 <br>
 
 ### Referências
-[Class SpringApplication](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/SpringApplication.html)
-[Usando a anotação @SpringBootApplication](https://docs.spring.io/spring-boot/reference/using/using-the-springbootapplication-annotation.html)
+[Class SpringApplication](https://docs.spring.io/spring-boot/api/java/org/springframework/boot/SpringApplication.html) <br>
+[Usando a anotação @SpringBootApplication](https://docs.spring.io/spring-boot/reference/using/using-the-springbootapplication-annotation.html) <br>
 [ Configuração automática](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-auto-configuration.html)
 
 
@@ -211,8 +211,8 @@ Neste exemplo:
 
 ### Referências
 
-[ResponseEntity](https://docs.spring.io/spring-framework/docs/4.1.0.RC1_to_4.1.0.RC2/Spring%20Framework%204.1.0.RC2/org/springframework/http/ResponseEntity.html)
-[@GetMapping](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/GetMapping.html)
+[ResponseEntity](https://docs.spring.io/spring-framework/docs/4.1.0.RC1_to_4.1.0.RC2/Spring%20Framework%204.1.0.RC2/org/springframework/http/ResponseEntity.html) <br>
+[@GetMapping](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/GetMapping.html) <br>
 [@RequestMapping](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-requestmapping.html)
 
 
